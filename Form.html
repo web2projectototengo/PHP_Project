@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
+  <script src="jque.js"></script>
+<script>
+function validateForm() {
+  var x = document.forms["form"]["password"].value;
+	var y = document.forms["form"]["reppas"].value;
+  if (x.length<8) {
+    alert("password should contain at least 8 characters");
+    return false;
+  }
+	if (y!=x) {
+		alert("passwords should match");
+		return false;
+	}
+}
+
+</script>
+</head>
+<body>
+
+
+		</ul>
+		<form name="form" action="./register.php" onsubmit="return validateForm()" method="post">
+		<div id="ff" class="wrapper">
+			<div class="form"  id="form">
+				 <div class="inputfield">
+						<label>First Name <br> <br></label>
+						<input type="text" name="saxeli" required class="input"  >
+				 </div>
+					<div class="inputfield">
+						<label>Last Name <br> <br></label>
+						<input type="text" name="gvari" required class="input">
+				 </div>
+				 <div class="inputfield">
+						<label>Password</label>
+						<input type="password" name="password" required  class="input">
+				 </div>
+				<div class="inputfield">
+						<label>Confirm Password</label>
+						<input type="password"  name="reppas" required class="input">
+				 </div>
+					<div class="inputfield">
+
+						<div>
+							Gender
+						<span ><input type="radio" name="gender" value="1" id="F"><label > Female</label></span>
+		<span ><input type="radio" name="gender" required value="2" id="M"><label > Male</label></span>
+						</div>
+				 </div>
+		<br>
+					<div class="inputfield">
+						<label>Email Address <br> <br> </label>
+
+					<form><input type="email" name="email" placeholder="name23@example.com" required>
+				 </div>
+
+				<div class="inputfield">
+						<label>Phone Number <br> <br></label>
+						<input type="text" placeholder="#########" name="nomeri" required class="input">
+				 </div>
+				<div class="inputfield">
+						<label>Address <br> <br></label>
+			<input type="text" name="misamarti" required class="input">
+				 </div>
+				<div class="inputfield">
+						<label>Postal Code <br> <br></label>
+						<input type="text" name="posta" required class="input">
+				 </div>
+				<div class="inputfield terms">
+						<label class="check">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						send me updates about the games I purchase
+				 </div>
+				<div class="inputfield">
+					<br>
+					<input type="submit" value="Register" class="btn" name="Register" id="Register">
+				</div>
+			</div>
+		</div>
+	</form>
+	</nav>
+	<section></section>
+
+
+
+</body>
+</html>

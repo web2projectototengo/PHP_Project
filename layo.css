@@ -1,0 +1,90 @@
+
+h1{
+	color:white;
+	font-family:Arial;
+}
+
+article {
+	background: blue;
+	width: 37.5em;
+	float: left;
+	padding: 10px;
+	color:yellow;
+}
+#Column2 {
+	background: green;
+	width: 15em;
+	float: left;
+	width: 15em;
+
+	padding: 8.8px;
+	color:yellow8
+}
+#Column3 {
+	background: red;
+	width: 18em;
+	float: left;
+
+	padding: 10px;
+	background-color: ;
+	color:yellow;
+font-size:20px;
+
+
+}
+footer {
+	position:fixed;
+	background-color: red;
+    bottom:0;
+    font-family:Arial;
+    font-style: italic;
+
+
+}
+#container{
+	text-align: center;
+}
+
+#Column4 {
+	background: darkviolet;
+	width: 30em;
+	float: left;
+
+	padding: 10px;
+	background-color: ;
+	color:yellow;
+font-size:20px;
+
+
+}
+
+#ps{
+	height: 130px;
+	weight:60px;
+}
+
+.butbuy {
+	box-shadow: 13px 2px 40px 6px;
+	font-size: 20px;
+	font-family:fantasy;
+	color:darkblue;
+
+
+}
+
+.butbuy:hover {
+	box-shadow: 13px 2px 40px 20px;
+	font-size: 20px;
+	font-family:fantasy;
+	color:darkblue;
+
+
+}
+
+#pur {
+	color:lime;
+}
+
+.prod:hover {
+	color:yellow;
+}

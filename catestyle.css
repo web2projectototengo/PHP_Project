@@ -1,0 +1,63 @@
+body{
+
+}
+
+
+#one {
+
+width: 280px;
+height:210px;
+transition-duration: 450ms;
+transition-property: transform;
+transition-timing-function:linear;
+border-radius: 40%;
+margin-right: 50px;
+}
+
+#one:hover {
+  width: 280px;
+  height:210px;
+transform: scale(1.2,1.2);
+ border-radius: 40%;
+}
+
+#two {
+
+width: 280px;
+height:210px;
+transition-duration: 450ms;
+transition-property: transform;
+transition-timing-function: ease-out;
+ border-radius: 40%;
+ margin-right: 50px;
+}
+
+#two:hover {
+  width: 280px;
+  height:210px;
+transform: scale(1.2,1.2);
+ border-radius: 40%;
+
+
+}
+
+#three {
+
+width: 280px;
+height:210px;
+transition-duration: 450ms;
+transition-property: transform;
+transition-timing-function: ease-in;
+ border-radius: 40%;
+}
+
+#three:hover {
+  width: 280px;
+height:210px;
+  transform: scale(1.2,1.2);
+   border-radius: 40%;
+}
+
+#consoles {
+text-align: center;
+}
