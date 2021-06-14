@@ -1,5 +1,17 @@
 
 <?php
+
+try {
+  $conn = new PDO("mysql:host=localhost;dbname=registered_accounts", "root", "");
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//  echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
+
+
+
 session_start();
 if(isset($_SESSION['email']) && isset($_SESSION['first_name'])){
  ?>
@@ -9,6 +21,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['first_name'])){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title></title>
   </head>
   <style >
