@@ -36,7 +36,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
   </style>
     <body>
       <p>
-<button type="button" class="btn btn-success">Add</button>
+<a  href="add.php"  class="btn btn-success">Add</a>
       </p>
 <table class="table table-hover">
   <thead>
@@ -57,7 +57,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
       <td><?php echo $products['title'] ?></td>
       <td><?php echo $products['link'] ?></td>
 <td>
-<button type="button" class="btn btn-primary">Edit</button>
+<a href="update.php?id=<?php echo $products['id'] ?>" class="btn btn-primary">Edit</a>
 <!--<button type="button" class="btn btn-danger">Delete</button>-->
 <form  action="delete.php" method="post" style="display: inline-block">
   <input type="hidden" name="id" value="<?php echo $products['id'] ?>"/>
