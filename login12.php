@@ -31,7 +31,11 @@ $result=mysqli_query($link,$sql);
 if(mysqli_num_rows($result)){
   $row=mysqli_fetch_assoc($result);
 echo "Logged in";
+if($row['status']=='user')
 header("Location: loggedin.php");
+else {
+  header("Location: admin_page.php");
+}
 //  print_r($row);
 $_SESSION['email']=$row['email'];
 $_SESSION['password']=$row['password'];
