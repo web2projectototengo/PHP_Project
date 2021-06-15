@@ -36,7 +36,10 @@ header("Location: loggedin.php");
 $_SESSION['email']=$row['email'];
 $_SESSION['password']=$row['password'];
 $_SESSION['first_name']=$row['first_name'];
-
+$_SESSION['last_name']=$row['last_name'];
+$_SESSION['phone']=$row['phone'];
+$_SESSION['address']=$row['address'];
+$_SESSION['postal_code']=$row['postal_code'];
 
 } else {
   echo "Wrong email or password";

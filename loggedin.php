@@ -1,6 +1,7 @@
 
 <?php
 
+/*
 try {
   $conn = new PDO("mysql:host=localhost;dbname=registered_accounts", "root", "");
   // set the PDO error mode to exception
@@ -9,11 +10,17 @@ try {
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
-
+ */
 
 
 session_start();
-if(isset($_SESSION['email']) && isset($_SESSION['first_name'])){
+if(isset($_SESSION['email']) && isset($_SESSION['first_name'])
+&& isset($_SESSION['last_name']) && isset($_SESSION['phone'])
+&& isset($_SESSION['address']) && isset($_SESSION['postal_code'])
+
+){
+
+
  ?>
 
 
@@ -36,6 +43,14 @@ if(isset($_SESSION['email']) && isset($_SESSION['first_name'])){
   font-size: 40px;
 margin: 20px;
 
+  }
+
+  th{
+    color: white;
+  }
+
+  td{
+    color: white;
   }
 
   #LOGOUT {
@@ -104,6 +119,32 @@ margin-right: 25%;
 <button id="shop" type="button" onclick="window.location.href='/proj/index.html'" value="shopping" name="shopping">Contniue Shopping 🛍️</button>
 <br>
 
+<h3> Your Account info </h3>
+
+
+<table class="table table-bordered border-warning">
+  <thead>
+    <tr>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Address</th>
+      <th scope="col">Postal code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><?php echo $_SESSION['first_name'] ?></th>
+      <td><?php echo $_SESSION['last_name'] ?></td>
+      <td><?php echo $_SESSION['email'] ?></td>
+      <td><?php echo $_SESSION['phone'] ?></td>
+      <td><?php echo $_SESSION['address'] ?></td>
+      <td><?php echo $_SESSION['postal_code'] ?></td>
+    </tr>
+
+  </tbody>
+</table>
 
   </body>
 </html>
