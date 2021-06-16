@@ -10,6 +10,14 @@ try {
   echo "Connection failed: " . $e->getMessage();
 }
 
+
+session_start();
+if($_SESSION['status']!='admin')
+{
+
+    header("Location: notallowed.html");
+}
+
 $statement = $conn->prepare('SELECT * FROM reg_prods');
 $statement->execute();
 $products = $statement->fetchAll(PDO::FETCH_ASSOC);

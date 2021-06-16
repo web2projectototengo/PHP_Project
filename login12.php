@@ -28,8 +28,12 @@ $password=$_POST['pass'];
 $sql = "SELECT * FROM reg_accs WHERE email = '$email' and password='$password'";
 $result=mysqli_query($link,$sql);
 
+
+
 if(mysqli_num_rows($result)){
   $row=mysqli_fetch_assoc($result);
+
+$_SESSION['status']=$row['status'];
 echo "Logged in";
 if($row['status']=='user')
 header("Location: loggedin.php");
